@@ -11,3 +11,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(rbenv init -)"
+
+function ttmux {
+  tmux new -A -s $(pwd);
+}
