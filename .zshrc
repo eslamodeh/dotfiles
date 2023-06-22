@@ -4,14 +4,16 @@ alias rs="rails s"
 alias rc="rails c"
 alias nv="nvim ."
 export EDITOR='nvim'
-export ZSH="/Users/${USER}/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(rbenv init -)"
 
 function ttmux {
   tmux new -A -s $(pwd);
 }
+
+
+source $ZSH/oh-my-zsh.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

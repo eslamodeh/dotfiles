@@ -12,4 +12,4 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 ln -sF $(pwd)/nvim ~/.config/nvim;
 
-cp .editorconfig .tmux.conf .iterm2_profile.json ~/
+cp .zshrc .editorconfig .tmux.conf .iterm2_profile.json ~/
