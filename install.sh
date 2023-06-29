@@ -6,7 +6,7 @@ defaults write -g InitialKeyRepeat -int 10; # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1; # normal minimum is 2 (30 ms)
 
 brew install cmake vim neovim tmux fzf tig rbenv pyenv ag;
-pip3 install pynvim autopep8 flake8;
+pip3 install pynvim black pylint;
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags;
 
 $(brew --prefix)/opt/fzf/install;
