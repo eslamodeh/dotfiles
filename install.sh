@@ -1,3 +1,4 @@
+echo "TEST"
 set -e
 
 echo "Installing Oh My Zsh"
