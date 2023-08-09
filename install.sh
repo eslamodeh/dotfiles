@@ -10,9 +10,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)";
 defaults write -g InitialKeyRepeat -int 10; # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1; # normal minimum is 2 (30 ms)
 
-brew install cmake vim neovim tmux fzf tig rbenv pyenv ag prettier autoenv;
-pip3 install pynvim black pylint;
+brew install cmake vim neovim tmux fzf tig ag prettier autoenv;
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags;
+brew install rbenv;
+brew install pyenv ruff;
+
+pip3 install pynvim black pylint;
 
 $(brew --prefix)/opt/fzf/install;
 
