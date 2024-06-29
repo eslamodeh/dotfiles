@@ -15,7 +15,7 @@ defaults write -g InitialKeyRepeat -int 10; # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1; # normal minimum is 2 (30 ms)
 
 echo "Installing default packages"
-brew install gh cmake vim neovim tmux fzf tig ag prettier;
+brew install gh cmake vim neovim tmux fzf tig ag prettier rg fd;
 pip3 install pynvim; # for nvim
 brew install --HEAD universal-ctags;
 brew install rbenv pyenv nvm;
