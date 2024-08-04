@@ -19,6 +19,7 @@ brew install gh cmake vim neovim tmux fzf tig ag prettier rg fd;
 pip3 install pynvim; # for nvim
 brew install --HEAD universal-ctags;
 brew install rbenv pyenv nvm;
+brew install reattach-to-user-namespace; # for tmux copy
 $(brew --prefix)/opt/fzf/install;
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
