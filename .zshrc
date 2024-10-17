@@ -1,19 +1,21 @@
-# Custom aliases
-alias please="sudo"
-alias rs="rails s"
-alias rc="rails c"
-alias nv="nvim ."
-export EDITOR='nvim'
-export ZSH="${HOME}/.oh-my-zsh"
+# ZSH configuration
+export ZSH="$HOME/.oh-my-zsh"
+
 ZSH_THEME="robbyrussell"
-plugins=(git)
-
-eval "$(rbenv init -)"
-
-function ttmux {
-  tmux new -A -s $(pwd);
-}
-
+plugins=(git ruby rails)
 
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Ruby
+eval "$(rbenv init - zsh)"
+
+# Python
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Custom configuration
+function ttmux {
+  tmux new -A -s $(pwd);
+}
