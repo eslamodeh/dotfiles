@@ -21,6 +21,7 @@ brew install --HEAD universal-ctags;
 brew install rbenv pyenv nvm;
 brew install reattach-to-user-namespace; # for tmux copy
 brew install catimg; # for image preview inside telescope
+brew install pgformatter; # for SQL files linting
 $(brew --prefix)/opt/fzf/install;
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
