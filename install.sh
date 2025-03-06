@@ -16,7 +16,9 @@ defaults write -g KeyRepeat -int 1; # normal minimum is 2 (30 ms)
 
 echo "Installing default packages"
 brew install gh cmake vim neovim tmux fzf tig ag prettier rg fd;
-pip3 install pynvim; # for nvim
+# pip3 install pynvim; # for nvim
+echo "YOU MUST RUN: cd ~/.vim/plugged/YouCompleteMe && python3 install.py --all;"
+
 brew install --HEAD universal-ctags;
 brew install rbenv pyenv nvm;
 brew install reattach-to-user-namespace; # for tmux copy
