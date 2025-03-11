@@ -20,3 +20,7 @@ eval "$(pyenv init -)"
 function ttmux {
   tmux new -A -s $(pwd);
 }
+
+
+alias gcp="git commit -m '👮‍♂️' "
+alias gca="git commit -m '🚨'"
