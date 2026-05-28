@@ -14,19 +14,13 @@ echo "Updating keyword speed"
 defaults write -g InitialKeyRepeat -int 10; # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1; # normal minimum is 2 (30 ms)
 
-echo "Installing default packages"
-brew install gh cmake vim neovim tmux fzf tig ag prettier rg fd;
-pip3 install pynvim --break-system-packages; # for YCM
+echo "Installing shell + system tools"
+brew install vim tmux tig ag;
+brew install rbenv pyenv nvm;                 # language version managers
+brew install reattach-to-user-namespace;      # tmux copy
 
-brew install --HEAD universal-ctags;
-brew install rbenv pyenv nvm;
-brew install reattach-to-user-namespace; # for tmux copy
-brew install catimg; # for image preview inside telescope
-brew install pgformatter; # for SQL files linting
-$(brew --prefix)/opt/fzf/install;
-
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim';
+echo "Installing nvim + plugin dependencies"
+./nvim/scripts/install-deps.sh;
 
 echo "Linking nvim"
 rm ~/.config/nvim;
